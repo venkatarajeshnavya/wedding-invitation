@@ -84,6 +84,14 @@ h1, h2, h3, h4, h5, h6, figure {
   background: #F14E95;
 }
 
+.primary-background {
+  background-image:url(../images/background/primary.jpg);
+}@media screen and (max-width: 480px) {
+  .primary-background {
+    background-image:url(../images/background/primary-mobile.jpg);
+  }
+}
+
 .fh5co-nav {
   position: absolute;
   top: 0;
