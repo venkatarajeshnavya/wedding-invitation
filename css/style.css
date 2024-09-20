@@ -85,10 +85,10 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .primary-background {
-  background-image:url(../images/background/primary.jpg);
+  background-image:url(../images/primary.jpg);
 }@media screen and (max-width: 480px) {
   .primary-background {
-    background-image:url(../images/background/primary-mobile.jpg);
+    background-image:url(../images/primary-mobile.jpg);
   }
 }
 
