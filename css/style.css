@@ -85,12 +85,17 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .primary-background {
-  background-image:url(../images/primary.jpg);
+  background-image:url(../images/primary.jpeg);
 }@media screen and (max-width: 480px) {
   .primary-background {
-    background-image:url(../images/primary-mobile.jpg);
+    display: block;
+  }
+  .mobile-background{
+    background-image:url(../images/primary-mobile.jpeg);
   }
 }
+
+
 
 .fh5co-nav {
   position: absolute;
