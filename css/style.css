@@ -425,7 +425,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-counter .event-wrap,
 #fh5co-event .event-wrap {
   border: 2px solid rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.3);
   padding: 30px;
   width: 100%;
   float: left;
@@ -473,6 +473,9 @@ h1, h2, h3, h4, h5, h6, figure {
   float: left;
   margin-bottom: 30px;
   height: 250px;
+  -webkit-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
+  -moz-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
+  box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
 }
 
 #fh5co-counter {
