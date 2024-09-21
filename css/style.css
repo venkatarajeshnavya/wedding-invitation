@@ -51,6 +51,10 @@ body {
   width: 100%;
 }
 
+.video-container{
+  box-shadow: 0px 14px 33px -9px rgba(0, 0, 0, 0.75);
+}
+
 a {
   color: #F14E95;
   -webkit-transition: 0.5s;
