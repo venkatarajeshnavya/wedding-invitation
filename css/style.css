@@ -47,6 +47,10 @@ body {
   content: "";
 }
 
+.video{
+  width: 100%;
+}
+
 a {
   color: #F14E95;
   -webkit-transition: 0.5s;
