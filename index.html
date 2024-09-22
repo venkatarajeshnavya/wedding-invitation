@@ -366,13 +366,13 @@
 	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_4.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
-			<div class="row animate-box">
+			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2 id="rsvp">Are You Attending?</h2>
 					<p>Please Fill-up the form to notify you that you're attending. Thanks.</p>
 				</div>
 			</div>
-			<div class="row animate-box">
+			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
 					<form class="form-inline" method="post">
 						<div class="col-md-4 col-sm-4">
@@ -449,18 +449,29 @@
 
 	<script type="text/javascript">
         function sendEmail() {
-            Email.send({
-                Host: "smtp.gmail.com",
-                Username: 'manojharitha159@gmail.com',
-                Password: process.env.MAIL_PASSWORD,
-                To: 'manojharitha159@gmail.com',
-                From: 'manojharitha159@gmail.com',
-                Subject: "Sending Email using javascript",
+            // Email.send({
+            //     Host: "smtp.gmail.com",
+            //     Username: 'manojharitha159@gmail.com',
+            //     Password: process.env.MAIL_PASSWORD,
+            //     To: 'manojharitha159@gmail.com',
+            //     From: 'manojharitha159@gmail.com',
+            //     Subject: "Sending Email using javascript",
+            //     Body: "Name: "+document.getElementById("name").value+"/n Phone: "+document.getElementById("phone").value,
+            // })
+			// .then(function (message) {
+			// 	alert("Guest details recorded successfully")
+			// });
+
+			Email.send({
+				SecureToken : "8A7FEEF3F530387728D4A0114CA2DF59399B",
+				To : 'manojharitha159@gmail.com',
+				From : "you@isp.com",
+				Subject: "Sending Email using javascript",
                 Body: "Name: "+document.getElementById("name").value+"/n Phone: "+document.getElementById("phone").value,
-            })
-			.then(function (message) {
+            
+			}).then(
 				alert("Guest details recorded successfully")
-			});
+			);
         }
     </script>
 	<script>
