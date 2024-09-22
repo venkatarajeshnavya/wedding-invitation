@@ -133,6 +133,11 @@ h1, h2, h3, h4, h5, h6, figure {
   padding: 0;
   line-height: 40px;
   font-family: "Sacramento", Arial, serif;
+  box-shadow: 0px 14px 33px -9px rgba(0, 0, 0, 0.75);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
 }
 .fh5co-nav a {
   padding: 5px 10px;
