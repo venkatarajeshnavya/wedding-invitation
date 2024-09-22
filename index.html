@@ -78,10 +78,10 @@
 				<div class="col-xs-10 text-right menu-1">
 					<ul>
 						<li class="active"><a href="index.html">Home</a></li>
-						<li><a href="#wedding-events">Events</a></li>
-						<li><a href="#watch-live">Watch Live</a></li>
-						<li><a href="#wedding-gallery">Gallery</a></li>
-						<li><a href="#rsvp">RSVP</a></li>
+						<li><a href="#wedding-events" onclick="hideBurgerMenu()">Events</a></li>
+						<li><a href="#watch-live" onclick="hideBurgerMenu()">Watch Live</a></li>
+						<li><a href="#wedding-gallery" onclick="hideBurgerMenu()">Gallery</a></li>
+						<li><a href="#rsvp" onclick="hideBurgerMenu()">RSVP</a></li>
 					</ul>
 				</div>
 			</div>
@@ -463,6 +463,12 @@
 			});
         }
     </script>
+	<script>
+		function hideBurgerMenu() {
+			$('body').removeClass('offcanvas');
+			$('.js-fh5co-nav-toggle').removeClass('active');
+		};
+	</script>
 
 	<script>
 	var d = new Date();
