@@ -696,7 +696,7 @@ h1, h2, h3, h4, h5, h6, figure {
   padding: 0;
   margin: 0 0 10px 1%;
   list-style: none;
-  min-height: 400px;
+  min-height: 200px;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -714,7 +714,7 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 #fh5co-gallery-list li a {
-  min-height: 400px;
+  min-height: 200px;
   padding: 2em;
   position: relative;
   width: 100%;
