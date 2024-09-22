@@ -49,10 +49,17 @@ body {
 
 .video{
   width: 100%;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .video-container{
   box-shadow: 0px 14px 33px -9px rgba(0, 0, 0, 0.75);
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  border-radius: 7px;
 }
 
 a {
@@ -113,7 +120,7 @@ h1, h2, h3, h4, h5, h6, figure {
   padding: 0;
   width: 100%;
   padding: 40px 0;
-  z-index: 1001;
+  z-index: 999;
 }
 @media screen and (max-width: 768px) {
   .fh5co-nav {
@@ -473,9 +480,10 @@ h1, h2, h3, h4, h5, h6, figure {
   float: left;
   margin-bottom: 30px;
   height: 250px;
-  -webkit-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
-  -moz-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
-  box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  border-radius: 7px;
 }
 
 #fh5co-counter {
