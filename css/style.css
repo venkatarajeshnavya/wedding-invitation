@@ -279,6 +279,10 @@ h1, h2, h3, h4, h5, h6, figure {
   -moz-border-radius: 7px;
   -ms-border-radius: 7px;
   border-radius: 7px;
+}@media screen and (max-width: 768px) {
+  .fh5co-video {
+    height: 200px;
+  }
 }
 .fh5co-video a {
   z-index: 1001;
