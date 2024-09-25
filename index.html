@@ -367,21 +367,21 @@
 							</div>
 						</div>
 
-						<div class="col-md-12 col-sm-6" style="color: white; padding-bottom: 10px;">
+						<!-- <div class="col-md-12 col-sm-6" style="color: white; padding-bottom: 10px;">
 							<div>Would you like to leave a note for the couple..?
 							<input class="form-check-input" type="radio" id="yesRadiosButton" name="option" value="option1" checked onclick="showContent()">
 							  Yes
 							<input class="form-check-input" type="radio" id="noRadiosButton" name="option" value="option2" onclick="showContent()">
 							  No
 							</div>
-						</div>
-						
+						</div> 
+
 						<div class="col-md-12 col-sm-6 " id="wish-area">
 							<div class="form-group">
 								<label for="wish" class="sr-only">Wishes</label>
 								<textarea id="note" class="form-control" style="max-width: 100%; max-height: 300px; min-height: 100px;" placeholder="Your words can make their day—share your best wishes with the couple...!" required></textarea>
 							</div>
-						</div>
+						</div> -->
 						<div class="col-md-12 col-sm-6">
 							<!-- <button type="submit" class="btn btn-default btn-block" onclick="sendEmail()">Submit</button> -->
 							<button class="btn btn-default btn-block" onclick="sendEmail()">Submit</button>
@@ -454,7 +454,7 @@
 		function sendEmail() {
 			const name = document.getElementById('name').value.trim();
 			const phone = document.getElementById('phone').value.trim();
-			const textareaValue = document.getElementById('note').value.trim();
+			// const textareaValue = document.getElementById('note').value.trim();
 
 			// Check if the fields is empty
             if (!name) {
@@ -462,17 +462,17 @@
                 return; // Exit the function if the textarea is empty
             }
 			
-			const selectedOption = document.querySelector('input[name="option"]:checked').value;
-			if (selectedOption === 'option1') {
-				if (!textareaValue) {
-					alert('Please enter a note for the couple before submitting.'); // Alert the user
-					return; // Exit the function if the textarea is empty
-				}
-			}
+			// const selectedOption = document.querySelector('input[name="option"]:checked').value;
+			// if (selectedOption === 'option1') {
+			// 	if (!textareaValue) {
+			// 		alert('Please enter a note for the couple before submitting.'); // Alert the user
+			// 		return; // Exit the function if the textarea is empty
+			// 	}
+			// }
 
             const subject = encodeURIComponent('Guest Details'); // Set your subject
-            const body = encodeURIComponent(textareaValue); // Encode the textarea value
-            const mailtoLink = `mailto:admin@manojwedsharitha.com?subject=${subject}&body=Name:${name} Phone:${phone} Wishes:${body}`; // Replace with your email
+            // const body = encodeURIComponent(textareaValue); // Encode the textarea value
+            const mailtoLink = `mailto:admin@manojwedsharitha.com?subject=${subject}&body=Name:${name} Phone:${phone}`; // Replace with your email
 
             window.location.href = mailtoLink; // Redirect to mailto link
 		};
