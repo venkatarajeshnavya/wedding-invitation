@@ -470,8 +470,8 @@
 			}
 
             const subject = encodeURIComponent('Guest Details'); // Set your subject
-            const body = encodeURIComponent("Wishes: "+textareaValue); // Encode the textarea value
-            const mailtoLink = `mailto:admin@manojwedsharitha.com?subject=${subject}&body=Name:${name} Phone:${phone}${body}`; // Replace with your email
+            const body = encodeURIComponent(textareaValue); // Encode the textarea value
+            const mailtoLink = `mailto:admin@manojwedsharitha.com?subject=${subject}&body=Name:${name} Phone:${phone} Wishes:${body}`; // Replace with your email
 
             window.location.href = mailtoLink; // Redirect to mailto link
 		};
