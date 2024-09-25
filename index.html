@@ -353,7 +353,7 @@
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
 					<!-- <form class="form-inline" method="post" action="mailto:admin@manojwedsharitha.com?subject=Guest%20Details&body" + document.getElementsById('note').innerText> -->
-					<form class="form-inline">
+					<form class="form-inline" href="#">
 						<div class="col-md-12 col-sm-6">
 							<div class="form-group">
 								<label for="name" class="sr-only">Name</label>
@@ -468,8 +468,6 @@
 					return; // Exit the function if the textarea is empty
 				}
 			}
-
-			
 
             const subject = encodeURIComponent('Guest Details'); // Set your subject
             const body = encodeURIComponent(textareaValue); // Encode the textarea value
