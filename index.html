@@ -352,7 +352,8 @@
 			</div>
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
-					<form class="form-inline" method="post" action="mailto:admin@manojwedsharitha.com?subject=Guest%20Details&body" + document.getElementsById('note').value>
+					<!-- <form class="form-inline" method="post" action="mailto:admin@manojwedsharitha.com?subject=Guest%20Details&body" + document.getElementsById('note').innerText> -->
+					<form class="form-inline">
 						<div class="col-md-12 col-sm-6">
 							<div class="form-group">
 								<label for="name" class="sr-only">Name</label>
@@ -369,20 +370,20 @@
 						<div class="col-md-12 col-sm-6" style="color: white; padding-bottom: 10px;">
 							<div>Would you like to leave a note for the couple..?
 							<input class="form-check-input" type="radio" id="yesRadiosButton" name="option" value="option1" checked onclick="showContent()">
-							  No
-							<input class="form-check-input" type="radio" id="noRadiosButton" name="option" value="option2" onclick="showContent()">
 							  Yes
+							<input class="form-check-input" type="radio" id="noRadiosButton" name="option" value="option2" onclick="showContent()">
+							  No
 							</div>
 						</div>
 						
-						<div class="col-md-12 col-sm-6 hidden" id="wish-area">
+						<div class="col-md-12 col-sm-6 " id="wish-area">
 							<div class="form-group">
 								<label for="wish" class="sr-only">Wishes</label>
 								<textarea id="note" class="form-control" style="max-width: 100%; max-height: 300px; min-height: 100px;" placeholder="Your words can make their day—share your best wishes with the couple...!" required></textarea>
 							</div>
 						</div>
 						<div class="col-md-12 col-sm-6">
-							<button type="submit" class="btn btn-default btn-block">Submit</button>
+							<button id="sendEmailButton" type="submit" class="btn btn-default btn-block" onclick="sendEmail()">Submit</button>
 						</div>
 					</form>
 				</div>
@@ -449,6 +450,33 @@
 			$('.js-fh5co-nav-toggle').removeClass('active');
 		};
 
+		function sendEmail() {
+			const name = document.getElementById('name').value.trim();
+			const phone = document.getElementById('phone').value.trim();
+			const textareaValue = document.getElementById('note').value.trim();
+
+			const selectedOption = document.querySelector('input[name="option"]:checked').value;
+			if (selectedOption === 'option1') {
+				if (!textareaValue) {
+					alert('Please enter a note for the couple before submitting.'); // Alert the user
+					return; // Exit the function if the textarea is empty
+				}
+			}
+
+			// Check if the textarea is empty
+            if (!name) {
+                alert('Please enter a name before submitting.'); // Alert the user
+                return; // Exit the function if the textarea is empty
+            }
+			
+
+            const subject = encodeURIComponent('Guest Details'); // Set your subject
+            const body = encodeURIComponent(textareaValue); // Encode the textarea value
+            const mailtoLink = `mailto:admin@manojwedsharitha.com?subject=${subject}&body=%0AName: ${name}%0APhone: ${phone}%0AWishes: ${body}`; // Replace with your email
+
+            window.location.href = mailtoLink; // Redirect to mailto link
+		};
+
 		function showContent() {
 			const option1Content = document.getElementById('wish-area');
 			const option2Content = document.getElementById('wish-area');
@@ -460,9 +488,9 @@
 			// Show content based on the selected option
 			const selectedOption = document.querySelector('input[name="option"]:checked').value;
 			if (selectedOption === 'option1') {
-				option1Content.classList.add('hidden');
+				option1Content.classList.remove('hidden');
 			} else if (selectedOption === 'option2') {
-				option2Content.classList.remove('hidden');
+				option2Content.classList.add('hidden');
 			}
 		}
 	</script>
