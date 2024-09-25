@@ -352,7 +352,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-10 col-md-offset-1">
-					<form class="form-inline" method="post" action="mailto:admin@manojwedsharitha.com?subject=Guest%20Details&body=Name:%20" + document.getElementsById('name').value>
+					<form class="form-inline" method="post" action="mailto:admin@manojwedsharitha.com?subject=Guest%20Details&body=Name:%20" + document.getElementsById('name').value + document.getElementsById('note').value>
 						<div class="col-md-12 col-sm-6">
 							<div class="form-group">
 								<label for="name" class="sr-only">Name</label>
@@ -378,7 +378,7 @@
 						<div class="col-md-12 col-sm-6 hidden" id="wish-area">
 							<div class="form-group">
 								<label for="wish" class="sr-only">Wishes</label>
-								<textarea class="form-control" style="max-width: 100%; max-height: 300px; min-height: 100px;" placeholder="Your words can make their day—share your best wishes with the couple...!" required></textarea>
+								<textarea id="note" class="form-control" style="max-width: 100%; max-height: 300px; min-height: 100px;" placeholder="Your words can make their day—share your best wishes with the couple...!" required></textarea>
 							</div>
 						</div>
 						<div class="col-md-12 col-sm-6">
