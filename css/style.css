@@ -51,6 +51,10 @@ body {
   width: 100%;
 }
 
+.hidden{
+  display: none;
+}
+
 .video-container{
   padding-top: 5px;
   padding-left: 5px;
