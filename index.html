@@ -455,6 +455,12 @@
 			const phone = document.getElementById('phone').value.trim();
 			const textareaValue = document.getElementById('note').value.trim();
 
+			// Check if the fields is empty
+            if (!name) {
+                alert('Please enter a name before submitting.'); // Alert the user
+                return; // Exit the function if the textarea is empty
+            }
+			
 			const selectedOption = document.querySelector('input[name="option"]:checked').value;
 			if (selectedOption === 'option1') {
 				if (!textareaValue) {
@@ -463,11 +469,6 @@
 				}
 			}
 
-			// Check if the textarea is empty
-            if (!name) {
-                alert('Please enter a name before submitting.'); // Alert the user
-                return; // Exit the function if the textarea is empty
-            }
 			
 
             const subject = encodeURIComponent('Guest Details'); // Set your subject
