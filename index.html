@@ -85,7 +85,7 @@
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
 							<h1>Manoj &amp; Haritha</h1>
-							<h2>are getting married in</h2>
+							<h2>are getting married! Live stream starts in..</h2>
 							<div class="simply-countdown simply-countdown-one"></div>
 							<button class="btn btn-default" style="max-width: 175px;"><a href="#watch-live">Watch-Live here</a></button>
 						</div>
@@ -134,7 +134,7 @@
 			<div class="col-md-12 animate-box">
 				<div class="fh5co-video fh5co-bg" style="background-image: url(images/live.png); box-shadow: 14px 14px 15px -9px rgba(0, 0, 0, 0.75);">
 					<!-- <a href="#" class="popup-vimeo"><i class="icon-video2"></i></a> -->
-					<a href="#"><i class="icon-video2" target="_blank"></i></a>
+					<a href="https://www.youtube.com/live/y0mhYu3OfO0"><i class="icon-video2" target="_blank"></i></a>
 					<div class="overlay"></div>
 				</div>
 			</div>
@@ -506,18 +506,27 @@
 	</script>
 
 	<script>
+	// var d = new Date();
+	// d.setFullYear(2024);
+	// d.setMonth(9);
+	// d.setDate(16);
+	// d.setHours(20);
+	// d.setMinutes(22);
+
 	var d = new Date();
 	d.setFullYear(2024);
 	d.setMonth(9);
-	d.setDate(17);
-	d.setHours(20);
-	d.setMinutes(22);
+	d.setDate(16);
+	d.setHours(19);
+	d.setMinutes(0);
 
     // default example
     simplyCountdown('.simply-countdown-one', {
         year: d.getFullYear(),
         month: d.getMonth() + 1,
-        day: d.getDate()
+        day: d.getDate(),
+		hours: d.getHours(),
+		minutes: d.getMinutes()
     });
 
     //jQuery example
